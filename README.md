@@ -1,6 +1,5 @@
 # EEW_discord_notify
-地震速報、速報軟件、discord webhook推播、discord webhook推送（配合地牛Wake Up!）
-使用python編寫，打包為exe後可直接被觸發
+由discord webhook推播地震速報，使用python編寫，打包為exe後可直接被「地牛Wake Up!」觸發
 
 ```mermaid
       graph LR
@@ -20,9 +19,9 @@
     
 <img src="https://user-images.githubusercontent.com/24865458/208754730-8b555ce3-bc43-447b-9c04-3a4f9f26b0e7.png" width="60%">
 
-### 第二步 下載zip 解壓縮在想要的路徑
+### 第二步 在右方Release處選擇最新exe檔案
+- 你也可以自己修改sourcefile後再編譯成exe
 - 路徑不可以有中文
-<a href="https://github.com/brianoy/EEW_discord_notify/raw/packed/discord_notify.exe">下載exe最新版本</a>
 
 <img src="https://user-images.githubusercontent.com/24865458/227401524-95423ca6-b000-4f2b-8c48-a92c07466edb.png" width="60%">
 
