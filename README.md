@@ -4,7 +4,7 @@
 ⚠️2025/2/16「地牛Wake Up!」[公告](https://www.facebook.com/OXWUEEW/posts/pfbid02MTbqfUzRrR6wjhbCsdN471akCjaiA2z5ZM2FyeVvFbwmxbD2DA3yQfSGrGEEWWSJl)
 > 從v4.1.1版起「連動」功能將不再提供所在地「預估震度」及「震波抵達秒數」兩個參數給指定程式
 
-目前的程式會產生 IndexError (尚未修正)
+所以目前的程式會產生 IndexError (尚未修正)
 
 ```mermaid
       graph LR
@@ -92,7 +92,8 @@ area = NULL
     
 3) 為什麼不直接用windows自帶的curl寫在cmd就好
 
-> ~~因為curl傳中文字訊息出去會變亂碼，試過改編碼`~~因為curl傳中文~字訊`utf-8 with BOM`都無解~~
+> ~~因為curl傳中文字訊息出去會變亂碼，試過改編碼chcp 65001或是把腳本存成utf-8 with BOM都無解~~
+> 可以使用unicode escape的方式，這樣連python都不需要了，[只需要bat腳本就好](https://github.com/0x6r1an0y/EEW-tg-notify)
 
 
 4) 為什麼看不到編輯頻道的選項
