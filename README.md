@@ -93,6 +93,7 @@ area = NULL
 3) 為什麼不直接用windows自帶的curl寫在cmd就好
 
 > ~~因為curl傳中文字訊息出去會變亂碼，試過改編碼chcp 65001或是把腳本存成utf-8 with BOM都無解~~
+> 
 > 可以使用unicode escape的方式，這樣連python都不需要了，[只需要bat腳本就好](https://github.com/0x6r1an0y/EEW-tg-notify)
 
 
