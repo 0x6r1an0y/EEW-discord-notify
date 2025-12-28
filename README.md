@@ -1,6 +1,11 @@
 # EEW_discord_notify
 由discord webhook推播地震速報，使用python編寫，打包為exe後可直接被「地牛Wake Up!」觸發
 
+⚠️2025/2/16「地牛Wake Up!」[公告](https://www.facebook.com/OXWUEEW/posts/pfbid02MTbqfUzRrR6wjhbCsdN471akCjaiA2z5ZM2FyeVvFbwmxbD2DA3yQfSGrGEEWWSJl)
+> 從v4.1.1版起「連動」功能將不再提供所在地「預估震度」及「震波抵達秒數」兩個參數給指定程式
+
+目前的程式會產生 IndexError (尚未修正)
+
 ```mermaid
       graph LR
       start[地震發生] --> input[地牛wakeup!被觸發]
@@ -10,8 +15,9 @@
       conditionC -- 觸發\n傳入變數: 強度時間 --> conditionD{discord_notify.py} -- webhook post--> send[discord傳訊息]
       send[discord傳訊息] --> stop[程式結束]
 ```
-# 使用說明
+## 使用說明
 
+### 第零步 電腦上要有python而且環境變數要有python
 
 ### 第一步 獲取discord伺服器內的頻道webhook網址
 
@@ -63,8 +69,7 @@ area = NULL
 # icon使用
 <img src="https://user-images.githubusercontent.com/24865458/229744187-4a5c7285-7e3e-4415-a875-188fb1af8ffc.png" width="2.5%"><a href="https://www.flaticon.com/free-icons/earthquake" title="earthquake icons">Earthquake icons created by Freepik - Flaticon</a>
 
-遵守flaticon.com
-的License summary: For commercial and personal projects
+遵守 flaticon.com 的 License summary: For commercial and personal projects
 
 # 打包
 由<a href="https://pypi.org/project/auto-py-to-exe/">auto-py-to-exe</a> 打包 discord_notify.exe
@@ -87,7 +92,8 @@ area = NULL
     
 3) 為什麼不直接用windows自帶的curl寫在cmd就好
 
-> 因為curl傳中文字訊息出去會變亂碼，試過改編碼```chcp 65001```依然無解
+> ~~因為curl傳中文字訊息出去會變亂碼，試過改編碼`~~因為curl傳中文~字訊`utf-8 with BOM`都無解~~
+
 
 4) 為什麼看不到編輯頻道的選項
 
