@@ -31,23 +31,19 @@ def check_and_get()->None:
 
 def msg()->str:
     global dcUrl,sleep_time,area
-    try:
+    if len(sys.argv) >= 3:
         magnitude = str(sys.argv[1]).replace("+","強").replace("-","弱")
         second = str(sys.argv[2])
-        #magnitude = str(2) #testnum
-        #second = str(500) #testnum
-        if str(area) == "NULL":
-            msg = "警告：地區預計震度" + magnitude + "級地震\n預計到達時間:" + second + "秒"
-        else :
-            msg = "警告：" + str(area) + "地區預計震度" + magnitude + "級地震\n預計到達時間:" + second + "秒"
-        return msg
+    else:
+        print("未收到傳入引數，改用不含震度與秒數的訊息格式")
+        magnitude = "未知"
+        second = "未知"
 
-    except IndexError as e:
-        print("未輸入引數錯誤，ERROR:"+str(e))
-        print("可能是由於使用者直接點擊本程式所導致")
-        print("請參考github內步驟說明")
-        print("試著透過地牛wakeup!中的測試按鈕才能傳入引數來做測試")
-        return "Error:未收到傳入引數"
+    if str(area) == "NULL":
+        msg = "警告：地區預計震度" + magnitude + "級地震\n預計到達時間:" + second + "秒"
+    else :
+        msg = "警告：" + str(area) + "地區預計震度" + magnitude + "級地震\n預計到達時間:" + second + "秒"
+    return msg
     
 def sleep()->None:
     global sleep_time
@@ -67,5 +63,4 @@ if __name__ == "__main__":
     check_and_get()
     dcWebhook(dcUrl=dcUrl, payload=msg())
     sleep()
-
 
