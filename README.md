@@ -4,7 +4,7 @@
 ⚠️2025/2/16「地牛Wake Up!」[公告](https://www.facebook.com/OXWUEEW/posts/pfbid02MTbqfUzRrR6wjhbCsdN471akCjaiA2z5ZM2FyeVvFbwmxbD2DA3yQfSGrGEEWWSJl)
 > 從v4.1.1版起「連動」功能將不再提供所在地「預估震度」及「震波抵達秒數」兩個參數給指定程式
 
-所以目前的程式會產生 IndexError (尚未修正)
+目前程式已支援在未傳入參數時仍可正常發送通知
 
 ```mermaid
       graph LR
